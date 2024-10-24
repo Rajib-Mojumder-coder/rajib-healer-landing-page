@@ -1,0 +1,843 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Georama:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --condensed-font: "Barlow Condensed", sans-serif;
+    --heading-font: "Georama", serif;
+    --body-font: "Poppins", serif;
+    --announcement-bar-bg-color: #298843;
+    --main-button-bg-color: #F15926;
+    --main-button-hover-color: #E84525;
+    --others-button-font-bg-color: #0B4B78;
+    --others-button-hover-color: #0E96D4;
+    --text-color: #fff;
+    --page-width: 1200px;
+}
+/*Announcement Bar design start */
+header{
+    box-shadow: 0 .5px 2px #b7b2b2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white; 
+    width: 100%;
+}
+.announcement-bar{
+    background-color: var(--announcement-bar-bg-color);
+    box-sizing: border-box;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.announcement-bar p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.15em;
+    font-weight: 600;
+    line-height: 1.5em;
+    color: var(--text-color);
+}
+/*Announcement Bar design end */
+/*Logo & Button design start */
+.home-logo-button-area{
+    width: var(--page-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 16px 0;
+    
+}
+.logo img{
+    width: 100%;
+    height: auto;   
+}
+.btn{
+  display: inline-block;
+  background-color: var(--main-button-bg-color);
+  padding: 10px 24px;
+  border-radius: 5px;
+  transition: all 0.3s ease; 
+  text-align: center; 
+  font-family: var(--body-font);
+}
+.btn a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.15em;
+    font-weight: 600;
+    line-height: 1.15em;
+}
+.btn:hover{
+    background-color: var(--main-button-hover-color);
+}
+
+/* Banner Part design start */
+.banner-part{
+    background-image: url(images/banner.jpg);
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container{
+    max-width: var(--page-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 4em 0;
+}
+.banner-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.banner-heading h1, .banner-heading h3, .banner-heading ul {
+    color: var(--text-color)
+}
+.banner-heading h1{
+    font-family: var(--heading-font);
+    font-size: 63px;
+    font-weight: 700;
+    line-height: 70px;
+    width: 60%;
+}
+.banner-heading h3{
+    font-family: var(--heading-font);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 35px;
+    padding: .75em 0;
+}
+.banner-heading ul, .product-info2 ul{
+    font-family: var(--body-font);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-left: 15px;
+}
+.banner-part .btn{
+    margin-top: 1.5em;
+    border-radius: 30px;
+    padding: 14px 30px;
+    transition: background-color 0.3s ease;
+}
+.container .btn a:hover {
+    background-color: var(--main-button-hover-color);
+}
+/* End Banner Part design start */
+
+/* Start Added transparent overlay to the banner part section */
+.banner-part{
+    position: relative;
+}
+.banner-part::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.container .btn{
+    z-index: 2;
+    color: var(--text-color);
+    position: relative;
+}
+.banner-heading h1, .banner-heading h3, .banner-heading ul {
+    z-index: 2;
+}
+/* End transparent overlay to the banner part section */
+
+/* Product Banner page Design Start */
+.product-banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.product-info{
+    width: 50%;
+}
+.product-info h1, .product-info h3, .product-info p{
+    color: var(--others-button-font-bg-color)
+}
+.product-info h3{
+    font-family: var(--heading-font);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 35px;
+}
+.product-info h1{
+    font-family: var(--heading-font);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+    width: 90%;
+    padding: 8px 0;
+}
+.product-info p{
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 8px 0 12px 0;
+    width: 90%;
+    text-align: justify;
+}
+.product-img{
+    width: 50%;
+}
+.product-img img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.product-info .btn {
+    background-color: var(--others-button-font-bg-color);
+    border-radius: 30px;
+    padding: 14px 30px;
+    transition: all 0.3s ease;
+    
+}
+.product-info .btn a:hover {
+    background-color: var(--main-button-hover-color);
+}
+/* End Product Banner page Design */
+
+/* start info banner 2 Desig */
+
+.info-banner {
+    background-color: #F5F5F5; /* Light grey background */
+}
+
+/* Part 1 Styling */
+.part1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.part1 h3, .box h3 {
+    font-family: var(--heading-font);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 35px;
+    color: var(--others-button-font-bg-color);
+    text-align: center;
+}
+
+.part1 h1 {
+    color: var(--others-button-font-bg-color);
+    font-family: var(--heading-font);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+    padding-top: 8px;
+}
+
+/* Part 2 Styling */
+.part2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.box {
+    background-color: #FFFFFF;
+    padding: 20px;
+    width: 23%; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    box-shadow: 0 0 5px 5px #edebeb;
+}
+
+.box p {
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--others-button-font-bg-color);
+    padding: 8px 0 10px 0;
+}
+/* end info banner 2 Desig */
+/* Start Product banner2 Desig */
+.product-info2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: auto auto auto 50px;
+}
+.product-info2 h1{
+    padding: 8px 0;
+}
+.product-info2 ul{
+    color: var(--others-button-font-bg-color);
+    padding: 8px;
+}
+.product-info2 .btn{
+    margin-top: 18px;
+}
+
+/* start info banner 3 Desig */
+.product-info3{
+    margin: auto 0;
+}
+.product-info3 h1{
+    width: 70%;
+}
+.product-info3 p{
+    padding-bottom: 24px;
+}
+
+/* End info banner 3 Desig */
+
+/* start info banner 4 Design */
+
+.product-info4{
+    margin: auto auto auto 50px;
+}
+.product-price {
+    font-size: 24px; 
+    font-weight: bold;
+    color: var(--main-button-bg-color); 
+    font-family: var(--body-font);
+}
+
+.product-price .currency {
+    font-size: 18px; 
+    vertical-align: top; 
+}
+
+.product-price .amount {
+    font-size: 24px;
+    margin-left: 2px; 
+}
+/* end info banner 4 Design*/
+
+/* Start Multiples Products design*/
+.products-container{
+    padding-bottom: 16px;
+}
+.multiple-products {
+    padding: 20px 0;
+}
+
+.product-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-header h1 {
+    color: var(--others-button-font-bg-color);
+    font-family: var(--heading-font);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* Subtle hover effect */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-family: var(--heading-font);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 35px;
+    color: var(--others-button-font-bg-color);
+    text-align: center;
+}
+
+.product-card p {
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--others-button-font-bg-color);
+    padding: 8px 6px;
+}
+/* End multiple product design*/
+
+/* Start design of Compirison section*/
+
+/* Style for the entire comparison section */
+.comparision-div{
+    background-color: #f5f5f5;
+    padding: 16px 0;
+}
+/* Style for the entire comparison section */
+.comparison-section {
+    width: 70%;
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Header styles */
+.comparison-section h1 {
+    font-size: 36px;
+    color: var(--others-button-font-bg-color);
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for comparison table */
+.comparison-table {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    gap: 0px; /* Remove gap between columns */
+}
+
+/* Row styling to ensure horizontal red lines between rows */
+.row {
+    position: relative;
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #1a3e6e;
+}
+
+/* Styles for each column */
+
+/* Featured Text Column */
+.featured-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-text .row h3 {
+    font-size: 24px;
+    color: var(--others-button-font-bg-color);
+    margin: 0;
+    padding: 8px 0;
+}
+
+/* Healer Choice Column with white bg and border */
+.healer-choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #1a3e6e;
+    border-radius: 10%;
+}
+
+.healer-choice-1 img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Other Choice Column */
+.other-choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.other-choice .row img {
+    width: 30px;
+    height: 30px;
+}
+
+.Feature-6, .other-choice-6, .healer-choice-6{
+    border-bottom: none;
+}
+
+/* End Style for the entire comparison section */
+
+/* Product image gallery coding start */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .image-gallery img {
+    width: calc(25% - 15px);
+    margin-bottom: 15px;
+  }
+  
+  .image-gallery img:nth-child(4n) {
+    margin-right: 0;
+  }
+  /* End Product image gallery coding start */
+
+  /* Start 2nd Banner Part design*/
+  .banner-part2{
+    background-image: url(images/dementia-1.jpg);
+    max-width: 100%;
+    width: var(--page-width);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+ 
+  .banner-heading2 h1{
+    color: var(--text-color);
+    font-family: var(--heading-font);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .banner-heading2 h3{
+    font-family: var(--heading-font);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 35px;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 16px 0;
+  }
+  .banner-part2 .btn{
+    border-radius: 30px;
+    padding: 16px 30px;
+    margin-top: 16px;
+  }
+  /* Banner part color overlay aided */
+  .banner-part2{
+    position: relative;
+  }
+  .banner-part2::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .banner-heading2 h1, .banner-heading2 h3, .btn{
+    z-index: 2;
+    color: var(--text-color);
+    position: relative;
+  }
+  /* End of 2nd banner part design */
+  .footer{
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+  }
+.footer-info{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+    gap: 20px;
+    padding: 36px 0;
+    margin-top: 24px;
+}
+  .footer-info .row{
+    border: none;
+    flex-direction: column;
+  }
+  .container .footer-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-info h4{
+    font-family: var(--heading-font);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 35px;
+    color: var(--announcement-bar-bg-color);
+    padding: 12px 0;
+  }
+  .footer-info p{
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(61, 60, 60);
+    padding: 0;
+  }
+  .footer-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-text p{
+    padding: 36px 12px;
+    text-align: justify;
+    font-family: var(--body-font);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;    
+  }
+  .copy-right{
+    background-color: var(--announcement-bar-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .copy-right .container{
+    background-color: var(--announcement-bar-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+  }
+  .copy-right h4, .copy-right span{
+    color: var(--text-color);
+    font-family: var(--condensed-font);
+    font-weight: 300;
+    font-size: 18px;
+  }
+  /* End of Design*/
+
+  /* Responsive Design */
+@media (max-width: 1200px) {
+    :root {
+        --page-width: 100%;
+    }
+
+    .home-logo-button-area {
+        width: 100%;
+        padding: 8px 4px; 
+    }
+    .banner-part{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-part .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 20px;
+    }
+    .banner-heading h1 {
+        font-size: 40px;
+        line-height: 60px;
+        width: 100%;
+    }
+
+    .banner-heading h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .product-banner{
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+    }
+    .product-banner .btn{
+        margin: 12px 0;
+    }
+    .product-info {
+        width: 100%;
+    }
+
+    .product-img {
+        width: 100%;
+    }
+
+    .multiple-products {
+        padding: 10px 0;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-banner,
+    .banner-part2 {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-logo-button-area {
+        padding: 8px;
+    }
+
+    .banner-heading h1 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .banner-heading h3 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .product-banner{
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+    }
+    .product-banner .btn{
+        margin: 12px 0;
+    }
+    .container{
+        padding: 16px;
+    }
+    .part2 {
+        flex-direction: column;
+        align-items: center; /* Center-align the boxes */
+    }
+    .box {
+        width: 100%; /* Each box takes the full width */
+        margin-bottom: 20px; /* Add space between boxes */
+    }
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-table {
+        grid-template-columns: 1fr;
+    }
+    .healer-part .container{
+        padding: 16px;
+    }
+    .image-gallery img {
+        width: 48%; /* 2 images per row */
+    }
+    .banner-part2{
+        padding: 8px;
+    }
+    .copy-right{
+        padding: 8px;
+        max-width: 100%;
+        margin-top: 8px;
+    }
+    .copy-right .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .copy-right .container h4{
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+    }
+    .footer-info {
+        flex-wrap: wrap;
+    }
+    .footer-info .row {
+        width: 48%; 
+        margin-bottom: 20px;
+    }
+    .copy-right{
+        margin-top: 8px;
+    }
+    .copy-right .container {
+        flex-direction: column; 
+        align-items: center;
+        
+    }
+
+    .copy-right .div {
+        margin: 10px 0;
+        padding: 10px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .banner-heading h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .banner-heading h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+    /* */
+    .part1 h1 {
+        font-size: 28px; /* Adjust heading size for smaller screens */
+        line-height: 34px;
+    }
+
+    .box {
+        padding: 16px;
+    }
+
+    .box h3 {
+        font-size: 18px; /* Adjust heading size inside boxes */
+    }
+
+    .box p {
+        font-size: 14px; /* Adjust paragraph size for better readability */
+    }
+    .image-gallery img {
+        width: 100%; /* 1 image per row on small screens */
+    }
+    .banner-part2{
+        padding: 8px;
+    }
+    .copy-right{
+        padding: 8px;
+        max-width: 100%;
+        margin-top: 8px;
+    }
+    .copy-right .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .copy-right .container h4{
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+    }
+    .footer-info .row {
+        width: 100%; 
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footer-text p {
+        font-size: 12px; 
+    }
+}
